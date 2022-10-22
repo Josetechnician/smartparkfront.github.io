@@ -60,7 +60,7 @@ menus.forEach(menu=>{
         document.getElementById('create-payment').addEventListener('click',()=>{
           showPaymentCreateBox()
         })
-      },100)
+      },1000)
       
       
     }else if (page == 'reservations') {
@@ -68,7 +68,7 @@ menus.forEach(menu=>{
         document.getElementById('create-reservation').addEventListener('click',()=>{
           showReservationCreateBox()
         })
-      } ,100)
+      } ,1000)
       
       
     }
@@ -78,7 +78,7 @@ menus.forEach(menu=>{
           showLotCreateBox()
         })
       }
-      ,100)
+      ,1000)
      
     }
     else if (page == 'places') {
@@ -86,7 +86,7 @@ menus.forEach(menu=>{
         document.getElementById('create-place').addEventListener('click',()=>{
           showPlaceCreateBox()
         })
-      },100)
+      },1000)
       
     }
     else if (page == 'counties') {
@@ -95,7 +95,7 @@ menus.forEach(menu=>{
         document.getElementById('create-county').addEventListener('click',()=>{
           showCountyCreateBox()
         })
-      },1000)
+      },10000)
       
     }
    })

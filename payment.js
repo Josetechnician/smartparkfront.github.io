@@ -32,7 +32,7 @@ export const  showPaymentCreateBox = ()=> {
               "reservation_fees":reservation_fees,
              
           }
-          fetch("http://localhost:5000/api/payments/create", {
+          fetch("https://smartpark-2.herokuapp.com/api/payments/create", {
               method: 'POST',
               body: new URLSearchParams(data),
               headers: new Headers({
@@ -55,7 +55,7 @@ export const  showPaymentCreateBox = ()=> {
  export const showPaymentEditBox= (id) =>{
     
    
-    fetch("http://localhost:5000/api/payments/"+id)
+    fetch("https://smartpark-2.herokuapp.com/api/payments/"+id)
     .then(response => response.json())
     .then(data=>{
         
@@ -83,7 +83,7 @@ export const  showPaymentCreateBox = ()=> {
     const reservation_fees = document.getElementById("reservation_fees").value;
     
      
-    fetch("http://localhost:5000/api/payments/"+id+"/edit",{
+    fetch("https://smartpark-2.herokuapp.com/api/payments/"+id+"/edit",{
         method :'PATCH',
         body:new URLSearchParams({
             "reserve_id":reserve_id,
@@ -105,7 +105,7 @@ export const  showPaymentCreateBox = ()=> {
   export const paymentDelete = (id)=> {
 
      
-    fetch("http://localhost:5000/api/payments/"+id+"/delete",{
+    fetch("https://smartpark-2.herokuapp.com/api/payments/"+id+"/delete",{
         method:"DELETE",
         headers: new Headers({
             'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
@@ -121,7 +121,7 @@ export const  showPaymentCreateBox = ()=> {
   }
   
   export const loadPaymentsTable = () => {
-    fetch("http://localhost:5000/api/payments")
+    fetch("https://smartpark-2.herokuapp.com/api/payments")
     .then(response=>response.json())
     .then(data=>{
         
