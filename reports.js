@@ -1,6 +1,6 @@
   export const loadSelectPlaces = ()=>{
     
-    fetch("http://localhost:5000/api/places")
+    fetch("https://smartpark-2.herokuapp.com/api/places")
     .then(response => response.json())
     .then(data=>{
         const place_array = data.data
@@ -56,7 +56,7 @@
         query_string += "stop_date="+stop_date
 
     }
-    fetch("http://localhost:5000/api/places/"+id+"/reservations"+query_string)
+    fetch("https://smartpark-2.herokuapp.com/api/places/"+id+"/reservations"+query_string)
     .then(response=>response.json())
     .then(data=>{
         

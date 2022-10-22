@@ -44,7 +44,7 @@ export const  showReservationCreateBox = ()=> {
               "end_time":end_time,
               "user_id":user_id,
           }
-          fetch("http://localhost:5000/api/reservations/create", {
+          fetch("https://smartpark-2.herokuapp.com/api/reservations/create", {
               method: 'POST',
               body: new URLSearchParams(data),
               headers: new Headers({
@@ -67,7 +67,7 @@ export const  showReservationCreateBox = ()=> {
  export const showReservationEditBox= (id) =>{
     
    
-    fetch("http://localhost:5000/api/reservations/"+id)
+    fetch("https://smartpark-2.herokuapp.com/api/reservations/"+id)
     .then(response => response.json())
     .then(data=>{
         
@@ -105,7 +105,7 @@ export const  showReservationCreateBox = ()=> {
     const user_id = document.getElementById("user_id").value;
    
      
-    fetch("http://localhost:5000/api/reservations/"+id+"/edit",{
+    fetch("https://smartpark-2.herokuapp.com/api/reservations/"+id+"/edit",{
         method :'PATCH',
         body:new URLSearchParams({
             "lot_id":lot_id,
@@ -132,7 +132,7 @@ export const  showReservationCreateBox = ()=> {
   export const reservationDelete = (id)=> {
 
      
-    fetch("http://localhost:5000/api/reservations/"+id+"/delete",{
+    fetch("https://smartpark-2.herokuapp.com/api/reservations/"+id+"/delete",{
         method:"DELETE",
         headers: new Headers({
             'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
@@ -150,7 +150,7 @@ export const  showReservationCreateBox = ()=> {
 //  lot_id,vehicle_category,vehicle_plate,reserve_date,
 // start_time,end_time,user_id
   export const loadReservationsTable = () => {
-    fetch("http://localhost:5000/api/reservations")
+    fetch("https://smartpark-2.herokuapp.com/api/reservations")
     .then(response=>response.json())
     .then(data=>{
         

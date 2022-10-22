@@ -25,7 +25,7 @@ export const countyCreate = ()=> {
             "county_name":county_name,
             
         }
-        fetch("http://localhost:5000/api/counties/create", {
+        fetch("https://smartpark-2.herokuapp.com/api/counties/create", {
             method: 'POST',
             body: new URLSearchParams(data),
             headers: new Headers({
@@ -49,7 +49,7 @@ export const countyCreate = ()=> {
 
   export const showCountyEditBox = (id) =>{
     
-    fetch("http://localhost:5000/api/counties/"+id)
+    fetch("https://smartpark-2.herokuapp.com/api/counties/"+id)
     .then(response => response.json())
     .then(data=>{
         
@@ -75,7 +75,7 @@ export const countyCreate = ()=> {
     const id = document.getElementById("id").value;
     const county_name = document.getElementById("county_name").value;
      
-    fetch("http://localhost:5000/api/counties/"+id+"/edit",{
+    fetch("https://smartpark-2.herokuapp.com/api/counties/"+id+"/edit",{
         method :'PATCH',
         body:new URLSearchParams({
             "county_name":county_name,
@@ -97,7 +97,7 @@ export const countyCreate = ()=> {
   export const countyDelete = (id) =>{
 
      
-    fetch("http://localhost:5000/api/counties/"+id+"/delete",{
+    fetch("https://smartpark-2.herokuapp.com/api/counties/"+id+"/delete",{
         method:"DELETE",
         headers: new Headers({
             'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
@@ -112,7 +112,7 @@ export const countyCreate = ()=> {
     
   }
   export const loadCountiesTable = ()=> {
-    fetch("http://localhost:5000/api/counties")
+    fetch("https://smartpark-2.herokuapp.com/api/counties")
     .then(response=>response.json())
     .then(data=>{
         

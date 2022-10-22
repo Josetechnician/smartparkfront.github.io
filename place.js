@@ -27,7 +27,7 @@ export const placeCreate = ()=> {
             "county_id":county_id,
             
         }
-        fetch("http://localhost:5000/api/places/create", {
+        fetch("https://smartpark-2.herokuapp.com/api/places/create", {
             method: 'POST',
             body: new URLSearchParams(data),
             headers: new Headers({
@@ -51,7 +51,7 @@ export const placeCreate = ()=> {
 
   export const showplaceEditBox = (id) =>{
     
-    fetch("http://localhost:5000/api/places/"+id)
+    fetch("https://smartpark-2.herokuapp.com/api/places/"+id)
     .then(response => response.json())
     .then(data=>{
         
@@ -80,7 +80,7 @@ export const placeCreate = ()=> {
     const place_name = document.getElementById("place_name").value;
     const county_id = document.getElementById("county_id").value;
 
-    fetch("http://localhost:5000/api/places/"+id+"/edit",{
+    fetch("https://smartpark-2.herokuapp.com/api/places/"+id+"/edit",{
         method :'PATCH',
         body:new URLSearchParams({
             "place_name":place_name,
@@ -103,7 +103,7 @@ export const placeCreate = ()=> {
   export const placeDelete = (id) =>{
 
      
-    fetch("http://localhost:5000/api/places/"+id+"/delete",{
+    fetch("https://smartpark-2.herokuapp.com/api/places/"+id+"/delete",{
         method:"DELETE",
         headers: new Headers({
             'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
@@ -118,7 +118,7 @@ export const placeCreate = ()=> {
     
   }
   export const loadPlacesTable = ()=> {
-    fetch("http://localhost:5000/api/places")
+    fetch("https://smartpark-2.herokuapp.com/api/places")
     .then(response=>response.json())
     .then(data=>{
         

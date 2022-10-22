@@ -35,7 +35,7 @@ export const  showLotCreateBox = ()=> {
               "lot_price":lot_price,
              
           }
-          fetch("http://localhost:5000/api/lots/create", {
+          fetch("https://smartpark-2.herokuapp.com/api/lots/create", {
               method: 'POST',
               body: new URLSearchParams(data),
               headers: new Headers({
@@ -58,7 +58,7 @@ export const  showLotCreateBox = ()=> {
  export const showLotEditBox= (id) =>{
     
    
-    fetch("http://localhost:5000/api/lots/"+id)
+    fetch("https://smartpark-2.herokuapp.com/api/lots/"+id)
     .then(response => response.json())
     .then(data=>{
         
@@ -87,7 +87,7 @@ export const  showLotCreateBox = ()=> {
     const current_use = document.getElementById("current_use").value;
     const lot_price = document.getElementById("lot_price").value;
     
-    fetch("http://localhost:5000/api/lots/"+id+"/edit",{
+    fetch("https://smartpark-2.herokuapp.com/api/lots/"+id+"/edit",{
         method :'PATCH',
         body:new URLSearchParams({
             "place_id":place_id,
@@ -110,7 +110,7 @@ export const  showLotCreateBox = ()=> {
   export const lotDelete = (id)=> {
 
      
-    fetch("http://localhost:5000/api/lots/"+id+"/delete",{
+    fetch("https://smartpark-2.herokuapp.com/api/lots/"+id+"/delete",{
         method:"DELETE",
         headers: new Headers({
             'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
@@ -126,7 +126,7 @@ export const  showLotCreateBox = ()=> {
   }
   
   export const loadLotsTable = () => {
-    fetch("http://localhost:5000/api/lots")
+    fetch("https://smartpark-2.herokuapp.com/api/lots")
     .then(response=>response.json())
     .then(data=>{
         
