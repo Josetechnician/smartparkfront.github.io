@@ -95,7 +95,7 @@ menus.forEach(menu=>{
         document.getElementById('create-county').addEventListener('click',()=>{
           showCountyCreateBox()
         })
-      },100)
+      },1000)
       
     }
    })
