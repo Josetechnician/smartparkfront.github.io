@@ -49,7 +49,7 @@ menus.forEach(menu=>{
       
     }else{
       
-      window.location.href ='/'
+      window.location.href ='./index.html'
       loadTable()
       
     }
