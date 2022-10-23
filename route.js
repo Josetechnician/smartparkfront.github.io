@@ -11,7 +11,7 @@ import { loadReportsTable, loadSelectPlaces } from './reports.js'
 const uname = localStorage.getItem('uname')
 
 if(!uname){
-  window.location.href = './sign_in.html'
+  window.location.href = './sign_in'
 }
 const menus = document.querySelectorAll(".sidebar a")
 let page ="home"
@@ -49,7 +49,7 @@ menus.forEach(menu=>{
       
     }else{
       
-      window.location.href ='./index.html'
+      window.location.href ='./index'
       loadTable()
       
     }
